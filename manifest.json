@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "DT Appraisal Extension",
+  "description": "This extension will check for available orders",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "flower2.png",
+    "default_popup": "popup.html",
+    "default_title": "Start Appraisal"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://appraisalzone.lendervend.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+
+  "permissions": [
+  "activeTab",
+  "https://ajax.googleapis.com/"
+  ]
+}
