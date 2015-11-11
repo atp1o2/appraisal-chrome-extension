@@ -1,10 +1,7 @@
-// var app = chrome.runtime.getBackgroundPage();
-
 function runChecker() {
   chrome.tabs.executeScript({
-    file: 'content_script.js'
+    file: 'content.js'
   });
 }
-
 
 document.getElementById('clickme').addEventListener('click', runChecker);
