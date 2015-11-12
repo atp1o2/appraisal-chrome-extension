@@ -49,3 +49,11 @@ alert("hello from bg.js");
 // chrome.browserAction.onClicked.addListener(function(tab) {
 //   checker();
 // });
+
+function runScript() {
+  chrome.tabs.executeScript({
+    "file": "content.js"
+  });
+}
+
+runScript();
